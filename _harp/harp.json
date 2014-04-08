@@ -1,0 +1,12 @@
+{
+  "domains": [""],
+  "globals": {
+    "site_title": "eMailGrouper",
+    "twitter": "@HarpPlatform",
+    "site_url": "http://example.com",
+    "disqus": {
+      "show": false,
+      "shortname": ""
+    }
+  }
+}

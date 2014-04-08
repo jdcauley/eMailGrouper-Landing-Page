@@ -1,0 +1,54 @@
+!!!
+html(lang="en")
+  head
+    meta(charset='utf-8')
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title #{ iste_title }
+    link(href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600", rel="stylesheet", type="text/css")
+    link(rel="stylesheet", href="/assets/css/app.css")
+    link(rel="alternate", type="application/rss+xml", title="#{ site_title } RSS", href="/rss.xml")
+  body(class="page-#{ current.path[0] } #{ current.path.join('-') }",  data-spy="scroll", data-target=".navbar-grouper")
+    nav.navbar.navbar-grouper.navbar-fixed-top(data-spy="affix" data-offset-top="10")
+      .container
+        .navbar-header
+        button.navbar-toggle(type="button", data-toggle="collapse", data-target="#main-nav")
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        #main-nav.collapse.navbar-collapse
+          ul.nav.navbar-nav.visible-xs
+            li
+              a(href="#why") why
+            li
+              a(href="#pricing") pricing
+            li
+              a(href="#hacks") hacks
+            li
+              a(href="https://emailgrouper.uservoice.com/", target="_blank") support
+        .row
+          .col-sm-8.col-sm-offset-2
+              ul.nav.navbar-nav.nav-justified.hidden-xs
+                li
+                  a(href="#why") why
+                li
+                  a(href="#pricing") pricing
+                li
+                  a(href="#hacks") hacks
+                li
+                  a(href="#support") support
+
+    != yield
+
+    footer.thefooter
+      .container
+        .row
+          .col-sm-6
+            p: small &copy; 2014 Triad Tech Services
+          .col-sm-6
+            p.pull-right Made with Love in Greensboro, NC
+
+
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js').
+    script(src="/assets/js/bootstrap.min.js")
+    script(src="/assets/js/app.js")
