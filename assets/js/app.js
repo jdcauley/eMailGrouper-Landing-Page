@@ -752,3 +752,15 @@ $('#email-signup').ajaxChimp({
     }
   }
 });
+
+$('#email-signup-price').ajaxChimp({
+  url: 'http://eMailGrouper.us7.list-manage.com/subscribe/post?u=8681300fc3ff9664032623d1c&amp;id=a4e14b8825',
+  callback: function callbackFunction (resp) {
+    if (resp.result === 'success') {
+      $( ".form-wrap-price" ).transition({ y: '40px', opacity: 0 }, 2000);
+      $( ".form-success-price").transition({ y: '40px', opacity: 1 }, 2000);
+    } else {
+      $( ".form-fail-price" ).show("slow");
+    }
+  }
+});
