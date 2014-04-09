@@ -2,8 +2,8 @@
   "domains": [""],
   "globals": {
     "site_title": "eMailGrouper",
-    "twitter": "@HarpPlatform",
-    "site_url": "http://example.com",
+    "twitter": "@eMailGrouper",
+    "site_url": "http://emailgrouper.com",
     "disqus": {
       "show": false,
       "shortname": ""
