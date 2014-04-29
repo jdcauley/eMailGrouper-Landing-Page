@@ -19,27 +19,50 @@ html(lang="en")
           span.icon-bar
           span.icon-bar
           span.icon-bar
+      if current.path[0] == "index"
         #main-nav.collapse.navbar-collapse
-          ul.nav.navbar-nav.visible-xs
+          ul.nav.navbar-nav.mobile-nav
+            li
+              a(href="/") home
             li
               a(href="#why") why
             li
               a(href="#pricing") pricing
             li
-              a(href="#hacks") hacks
-            li
-              a(href="https://emailgrouper.uservoice.com/", target="_blank") feedback
+              a(href="http://support.emailgrouper.com/", target="_blank") feedback
         .row
           .col-sm-8.col-sm-offset-2
               ul.nav.navbar-nav.nav-justified.hidden-xs
+                li
+                  a(href="/") home
                 li
                   a(href="#why") why
                 li
                   a(href="#pricing") pricing
                 li
-                  a(href="#hacks") hacks
+                  a(href="http://support.emailgrouper.com/") feedback
+      else
+        #main-nav.collapse.navbar-collapse
+          ul.nav.navbar-nav.mobile-nav
+            li
+              a(href="/") home
+            li
+              a(href="#{ site_url }/#why") why
+            li
+              a(href="#{ site_url }/#pricing") pricing
+            li
+              a(href="http://support.emailgrouper.com/", target="_blank") feedback
+        .row
+          .col-sm-8.col-sm-offset-2
+              ul.nav.navbar-nav.nav-justified.hidden-xs
                 li
-                  a(href="https://emailgrouper.uservoice.com/") feedback
+                  a(href="#{ site_url }") home
+                li
+                  a(href="#{ site_url }/#why") why
+                li
+                  a(href="#{ site_url }/#pricing") pricing
+                li
+                  a(href="http://support.emailgrouper.com/") feedback
 
     != yield
 
@@ -47,7 +70,7 @@ html(lang="en")
       .container
         .row
           .col-sm-6
-            p: small &copy; 2014 Triad Tech Services
+            p: small &copy; 2014 Triad Tech Services | <a class="white" href="http://twitter.com/#{ twitter }"> Follow Us on Twitter</a>
           .col-sm-6
             p.pull-right Made with Love in Greensboro, NC
 

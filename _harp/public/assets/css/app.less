@@ -7,7 +7,10 @@
 @brand-primary: #b44647;
 
 /* Utilities */
+.white{
+  color: @white;
 
+}
 .center{
   display: block;
   text-align: center;
@@ -44,6 +47,7 @@
 .thehero{
   display: block;
   width: 100%;
+  margin-bottom: 30px;
   padding-bottom: 100px;
   color: @white;
   background: @brand-primary url(../img/geopattern.png);
@@ -101,10 +105,20 @@
   li{
     padding: 5px;
   }
+
 }
+
 .thefooter{
   color: @white;
+  margin-top: 30px;
   padding-top: 10px;
   background: @brand-primary;
   border-top: 1px solid @white;
+}
+.page-index .thefooter{
+  margin-top: 0;
+}
+.mobile-nav{
+  .visible-xs;
+  background: @brand-primary;
 }
